@@ -9,6 +9,7 @@ function Background({children}) {
         <div className="shape mid-shape"></div>
         <div className="shape down-shape"></div>
         <div>{children}</div>
+
     </div>
 </div>
   );

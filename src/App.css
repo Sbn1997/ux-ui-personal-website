@@ -1,3 +1,5 @@
+
+/***********************************************************backgroung*******************************************************************************************/
 /* 1) The root element can expand as needed; no fixed height */
 #root {
   width: 100%;
@@ -50,6 +52,7 @@
   position: absolute;
   background-repeat: no-repeat;
   background-size: contain;  /* or cover, per your design needs */
+  z-index: 1;
 }
 
 /* Example shape positions from your original 1920×2887 design */
@@ -78,4 +81,27 @@
   width: 53.1%;
   height: 26.07%;
   background: url('./background-images/downShape.png') no-repeat center;
+}
+
+/***********************************************************profile*******************************************************************************************/
+
+
+.profile-wrapper{
+  height: 100vh;  
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.profile-section{
+  width :50%;
+  height: 50%;
+  background-color: aqua;
+  display: flex;
+  z-index: 2;
+
+
 }
