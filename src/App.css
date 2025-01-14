@@ -1,0 +1,81 @@
+/* 1) The root element can expand as needed; no fixed height */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) .homepage is also flexible, can grow in height.
+   Remove any old "width: 100vh" or "height: 320vh" from here. */
+.homepage {
+  width: 100%;
+  min-height: 100vh;        /* allows scrolling if content is taller than viewport */
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;  /* top-align the content */
+  background-color: #ffffff; /* or #ff0000 if you prefer debugging color */
+  overflow-x: hidden;       /* typically hide horizontal scroll, if any */
+  overflow-y: auto;         /* let it scroll vertically if needed */
+}
+
+/* 3) The aspect-ratio wrapper:
+   - Takes full width
+   - Constrains height to maintain 1920:2887
+   - Absolutely positions .background inside */
+.background-wrapper {
+  width: 100%;              
+  aspect-ratio: 1920 / 2887; 
+  position: relative;       /* important for .background's absolute positioning */
+  background-color: #ffffff; /* or #ff0000 if you prefer debugging color */
+  overflow: hidden;         /* clip anything outside this ratio box if you want */
+}
+
+/* 4) The .background fully fills the .background-wrapper */
+.background {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* optional subtle tint or debugging color */
+  background-color: rgba(166, 166, 166, 0.2);
+}
+
+/* 5) All shapes are absolutely positioned inside .background
+   The percentages are derived from the original 1920×2887 Figma/PSD design. */
+.shape {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;  /* or cover, per your design needs */
+}
+
+/* Example shape positions from your original 1920×2887 design */
+.top-shape {
+  /* Originally: left=0, top=0, width=1480, height=1319 => 77.08%, 45.68% */
+  left: 0%;
+  top: 0%;
+  width: 77.08%;   /* 1480/1920 * 100 = ~77.08% */
+  height: 45.68%;  /* 1319/2887 * 100 = ~45.68% */
+  background: url('./background-images/topShape.png') no-repeat center;
+}
+
+.mid-shape {
+  /* left=703px => 36.61%, top=615px => ~21.31%, width=1217px => 63.39%, height=2272 => ~78.72% */
+  left: 36.61%;
+  top: 21.31%;
+  width: 63.39%;
+  height: 78.72%;
+  background: url('./background-images/midShape.png') no-repeat center;
+}
+
+.down-shape {
+  /* left=0 => 0%, top=2134 => 73.9%, width=1021 => 53.1%, height=753 => 26.07% */
+  left: 0%;
+  top: 73.9%;
+  width: 53.1%;
+  height: 26.07%;
+  background: url('./background-images/downShape.png') no-repeat center;
+}
