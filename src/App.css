@@ -1,4 +1,6 @@
-
+a, button {
+  all: unset;
+}
 /***********************************************************backgroung*******************************************************************************************/
 /* 1) The root element can expand as needed; no fixed height */
 #root {
@@ -27,11 +29,12 @@
    - Constrains height to maintain 1920:2887
    - Absolutely positions .background inside */
 .background-wrapper {
-  width: 100%;              
-  aspect-ratio: 1920 / 2887; 
+  width: 100%;  
+  /* aspect-ratio: 1920 / 2887;              */
   position: relative;       /* important for .background's absolute positioning */
   background-color: #ffffff; /* or #ff0000 if you prefer debugging color */
-  overflow: hidden;         /* clip anything outside this ratio box if you want */
+  min-height: 2887px;
+  overflow: hidden;
 }
 
 /* 4) The .background fully fills the .background-wrapper */
@@ -53,6 +56,7 @@
   background-repeat: no-repeat;
   background-size: contain;  /* or cover, per your design needs */
   z-index: 1;
+  
 }
 
 /* Example shape positions from your original 1920×2887 design */
@@ -88,24 +92,94 @@
 
 .profile-wrapper{
   width: 100%;              
-  aspect-ratio: 1920 / 2887; 
   display: flex;
   justify-content: center;
-  z-index: -1;
+  
+  padding-top: 2vh;
 
 }
 
 .profile-section{
   width :75%;
-  height: 96%;
+  height: 90%;
   display: flex;
+  align-items: flex-start; /* Align children to the top */
+  justify-content: center;
   z-index: 2;
   background-color: #ffffffb2;
   border: 1px solid;
   border-color: #dfdbe9;
   border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  margin-top: 2%;
+  -webkit-backdrop-filter: blur(12px) brightness(100%);
+  backdrop-filter: blur(12px) brightness(100%);
+
+
+
 
 }
+
+.top-bar{
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  width: 91.6%;
+  height: 5.13%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  
+}
+
+.logo{  
+  height: 100%;
+  position: relative;
+  width: auto;
+
+}
+
+.bar-option{
+  line-height: 24px;
+  position: relative;
+  transition: opacity 0.2s ease;
+  color: rgba(56, 56, 56, 1);
+  padding-right: 20%;
+  display: inline-block;
+  white-space: nowrap; 
+}
+
+.bar-option:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-wrapper{
+  align-items: center;
+  border: 1px solid;
+  border-color: rgba(56, 56, 56, 1);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 14px 16px;
+  position: relative;
+  width: 128px;
+}
+
+.contact-btn{
+  padding: 16px, 14px;
+  color: rgba(56, 56, 56, 1);
+   
+}
+
+.bar-options-wrapper{
+  
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+
