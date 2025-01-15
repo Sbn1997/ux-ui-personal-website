@@ -1,3 +1,14 @@
+.name, .title {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+h1, p{
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+
+}
+
 a, button {
   all: unset;
 }
@@ -87,7 +98,7 @@ a, button {
   background: url('./background-images/downShape.png') no-repeat center;
 }
 
-/***********************************************************profile*******************************************************************************************/
+/****************************d*******************************profile*******************************************************************************************/
 
 
 .profile-wrapper{
@@ -104,6 +115,7 @@ a, button {
   height: 90%;
   display: flex;
   align-items: flex-start; /* Align children to the top */
+  flex-direction: column;
   justify-content: center;
   z-index: 2;
   background-color: #ffffffb2;
@@ -152,7 +164,7 @@ a, button {
 .bar-option:hover{
   opacity: 0.8;
   text-decoration: underline;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .btn-wrapper{
@@ -183,3 +195,166 @@ a, button {
 
 }
 
+.about-card-wrapper{
+ width:100%;
+ height:100%;
+ display: flex;
+ align-items: flex-start;
+}
+
+.about-wrapper{
+  width:39.7%;
+  margin-left: 4.1%;
+  margin-top: 11.4%;
+
+
+}
+
+.about{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about-me{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.name-wrapper{
+  width:100%;
+  height: 100%;
+}
+
+.name{
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 117px;
+  letter-spacing: 0.045em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
+  white-space: nowrap; 
+  color:rgba(55, 55, 55, 1);
+  margin:0;
+
+  
+
+}
+
+.title-wrapper{
+  width:100%;
+  height: 100%;
+
+}
+
+.title{
+font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+font-size: 36px;
+font-weight: 400;
+line-height: 43.88px;
+letter-spacing: 0.045em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:rgba(101, 101, 101, 1);
+display: inline-block;
+white-space: nowrap; 
+/* padding-left: 12px; */
+}
+
+.about-description{
+  width:100%;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 31.2px;
+  letter-spacing: 0.14em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color:rgba(0, 0, 0, 1);
+  display: inline-block;
+  white-space: nowrap; 
+  margin-top: 6.8%;
+  margin-bottom: 9.11%;
+
+}
+
+.btn-about-wrapper{
+  height: 13.6%;
+  width: 29.3%;
+}
+
+.btn-about{
+width: 168px;
+height: 48px;
+padding: 14px 24px 14px 24px;
+gap: 8px;
+border-radius: 100px;
+opacity: 0px;
+background-color: rgba(34, 94, 208, 1);
+color:rgba(255, 255, 255, 1);
+font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+font-size: 20px;
+font-weight: 800;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+text-transform: uppercase;
+
+
+}
+
+.btn-about:hover{
+  background: rgba(255, 255, 255, 0.50);
+  /* backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px) brightness(100%); */
+
+  border: 1px solid rgba(34, 94, 208, 1);
+  color: #225ED0;
+}
+
+.profile-logos-wrapper{
+  height: 11.81%;
+  width: 12.2%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column; 
+  margin-left: 4.3%;
+  margin-top: 8.1%;
+}
+
+p-logo{
+  height:64px;
+  width: 64px;
+}
+
+.figma{
+  height:64px;
+  width: 64px;
+}
+
+
+
+.logos-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.logos-col2{
+  margin-left: 3%;
+
+}
