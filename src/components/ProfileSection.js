@@ -4,7 +4,7 @@ import AboutCard from './AboutCard';
 import MainNameHeader from './MainNameHeader'
 import Skills from './Skills';
 import heroVideo from '../videos/hero.m4v'
-
+import EducationCaruosel from './EducationCaruosel';
 
 function ProfileSection() {
   return (
@@ -30,6 +30,10 @@ function ProfileSection() {
         </div>
         <div className='skills'>
             <Skills></Skills>
+        </div>
+
+        <div className='carouselWrapper'>
+          <EducationCaruosel></EducationCaruosel>
         </div>
         </div>
 

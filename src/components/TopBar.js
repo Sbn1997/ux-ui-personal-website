@@ -17,7 +17,6 @@ function TopBar () {
                     <a href='/'>Home</a>
                 </div>
                 <div className='bar-option'>Projects</div>
-                <div className='bar-option'>About Me</div>
             </div>
             <div className='btn-wrapper'>
                <button className='contact-btn'>Contact me</button>
